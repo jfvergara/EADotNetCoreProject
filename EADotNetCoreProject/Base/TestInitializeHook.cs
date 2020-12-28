@@ -54,7 +54,7 @@ namespace EAAutoFramework.Base
                     break;
             }
 
-            _parallelConfig.Driver = new RemoteWebDriver(new Uri("http://172.17.212.150:30001/wd/hub"), driverOptions.ToCapabilities());
+            _parallelConfig.Driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), driverOptions.ToCapabilities());
         }
 
         public virtual void NaviateSite()
