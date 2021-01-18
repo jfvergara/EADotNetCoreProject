@@ -46,9 +46,11 @@ namespace EAAutoFramework.Base
                     break;
                 case FirefoxOptions firefoxOptions:
                     firefoxOptions.AddAdditionalCapability(CapabilityType.EnableProfiling, true, true);
+                    firefoxOptions.AddArguments("start-maximized");
                     break;
                 case ChromeOptions chromeOptions:
                     chromeOptions.AddAdditionalCapability(CapabilityType.EnableProfiling, true, true);
+                    chromeOptions.AddArguments("start-maximized");
                     break;
             }
 
