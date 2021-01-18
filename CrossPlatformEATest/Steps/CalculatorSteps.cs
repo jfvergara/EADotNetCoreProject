@@ -35,7 +35,14 @@ namespace CrossPlatformEATest.Steps
         {
             _result = FirstNumber + SecondNumber;  
         }
-        
+
+        [When(@"the two numbers are rested")]
+        public void WhenTheTwoNumbersAreRested()
+        {
+            _result = FirstNumber - SecondNumber;
+        }
+
+
         [Then(@"the result should be (.*)")]
         public void ThenTheResultShouldBe(int result)
         {

@@ -10,7 +10,7 @@ Scenario: Register a new user with correc data
 	Then I click register link
 	When I enter UserName, Password, ConfirmPassword, Email
 	| UserName | Password  | ConfirmPassword | Email            |
-	| admin2   | password2 | password2       | admin2@gmail.com |
-	Then I click login button
+	| admin6  | pass123456Z_ | pass123456Z_       | admin6@gmail.com |
+	Then I click register button
 	Then I should see the username with hello
 	Then I click logout

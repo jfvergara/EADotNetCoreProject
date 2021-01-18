@@ -21,7 +21,7 @@ namespace CrossPlatformEATest.Steps
         public void WhenIEnterUserNamePasswordConfirmPasswordEmail(Table table)
         {
             dynamic data = table.CreateDynamicInstance();
-            _parallelConfig.CurrentPage.As<RegisterPage>().FillRegisterData(data.UserName, data.Password, data.ConfirmPassword, data.email);
+            _parallelConfig.CurrentPage.As<RegisterPage>().FillRegisterData(data.UserName, data.Password, data.ConfirmPassword, data.Email);
         }
     }
 }

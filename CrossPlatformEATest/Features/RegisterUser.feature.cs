@@ -114,15 +114,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
                 TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserName",
-                            "Password"});
+                            "Password",
+                            "ConfirmPassword",
+                            "Email"});
                 table10.AddRow(new string[] {
-                            "admin",
-                            "password"});
+                            "admin6",
+                            "pass123456Z_",
+                            "pass123456Z_",
+                            "admin6@gmail.com"});
 #line 11
- testRunner.When("I enter UserName and Password", ((string)(null)), table10, "When ");
+ testRunner.When("I enter UserName, Password, ConfirmPassword, Email", ((string)(null)), table10, "When ");
 #line hidden
 #line 14
- testRunner.Then("I click login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I click register button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 15
  testRunner.Then("I should see the username with hello", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

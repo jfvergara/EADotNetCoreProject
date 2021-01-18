@@ -12,7 +12,7 @@ namespace EAEmployeeTest.Pages
         IWebElement txtPassword => _parallelConfig.Driver.FindById("Password");
         IWebElement txtConfirmPassword => _parallelConfig.Driver.FindById("ConfirmPassword");
         IWebElement txtEmail => _parallelConfig.Driver.FindById("Email");
-        IWebElement btnRegister => _parallelConfig.Driver.FindById("submit");
+        IWebElement btnRegister => _parallelConfig.Driver.FindElementByCssSelector(".btn");
 
         public void FillRegisterData(string userName, string password, string confirmPassword, string email)
         {
@@ -20,6 +20,12 @@ namespace EAEmployeeTest.Pages
             txtPassword.SendKeys(password);
             txtConfirmPassword.SendKeys(confirmPassword);
             txtEmail.SendKeys(email);
+        }
+
+        public HomePage ClickRegisterButton()
+        {
+            btnRegister.Submit();
+            return new HomePage(_parallelConfig);
         }
     }
 }

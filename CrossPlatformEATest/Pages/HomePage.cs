@@ -16,7 +16,7 @@ namespace EAEmployeeTest.Pages
 
         IWebElement lnkLogin => _parallelConfig.Driver.FindByLinkText("Login");
 
-        IWebElement lnkRegister => _parallelConfig.Driver.FindByLinkText("registerLink");
+        IWebElement lnkRegister => _parallelConfig.Driver.FindByLinkText("Register");
 
         IWebElement lnkEmployeeList => _parallelConfig.Driver.FindByLinkText("Employee List");
 

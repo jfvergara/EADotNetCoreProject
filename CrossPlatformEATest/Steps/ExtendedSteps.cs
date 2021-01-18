@@ -69,7 +69,7 @@ namespace EAEmployeeTest.Steps
             else if (buttonName == "create")
                 _parallelConfig.CurrentPage = _parallelConfig.CurrentPage.As<CreateEmployeePage>().ClickCreateButton();
             else if (buttonName == "register")
-                _parallelConfig.CurrentPage = _parallelConfig.CurrentPage.As<CreateEmployeePage>().ClickCreateButton();
+                _parallelConfig.CurrentPage = _parallelConfig.CurrentPage.As<RegisterPage>().ClickRegisterButton();
         }
 
         [Then(@"I click log off")]
