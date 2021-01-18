@@ -16,6 +16,8 @@ namespace EAEmployeeTest.Pages
 
         IWebElement lnkLogin => _parallelConfig.Driver.FindByLinkText("Login");
 
+        IWebElement lnkRegister => _parallelConfig.Driver.FindByLinkText("registerLink");
+
         IWebElement lnkEmployeeList => _parallelConfig.Driver.FindByLinkText("Employee List");
 
         IWebElement lnkLoggedInUser => _parallelConfig.Driver.FindByXpath("//a[@title='Manage']");
@@ -44,6 +46,12 @@ namespace EAEmployeeTest.Pages
         {
             lnkEmployeeList.Click();
             return new EmployeeListPage(_parallelConfig);
+        }
+
+        public RegisterPage ClickRegister()
+        {
+            lnkRegister.Click();
+            return new RegisterPage(_parallelConfig);
         }
 
         public LoginPage ClickLogOff()

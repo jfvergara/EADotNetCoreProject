@@ -51,6 +51,8 @@ namespace EAEmployeeTest.Steps
                 _parallelConfig.CurrentPage = _parallelConfig.CurrentPage.As<HomePage>().ClickLogin();
             else if (linkName == "employeeList")
                 _parallelConfig.CurrentPage = _parallelConfig.CurrentPage.As<HomePage>().ClickEmployeeList();
+            else if (linkName == "register")
+                _parallelConfig.CurrentPage = _parallelConfig.CurrentPage.As<HomePage>().ClickRegister();
         }
 
         [Then(@"I click (.*) button")]
@@ -65,6 +67,8 @@ namespace EAEmployeeTest.Steps
             else if (buttonName == "createnews")
                 _parallelConfig.CurrentPage = _parallelConfig.CurrentPage.As<EmployeeListPage>().ClickCreateNews();
             else if (buttonName == "create")
+                _parallelConfig.CurrentPage = _parallelConfig.CurrentPage.As<CreateEmployeePage>().ClickCreateButton();
+            else if (buttonName == "register")
                 _parallelConfig.CurrentPage = _parallelConfig.CurrentPage.As<CreateEmployeePage>().ClickCreateButton();
         }
 

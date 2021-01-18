@@ -45,9 +45,7 @@ namespace EAAutoFramework.Base
                     driverOptions = new InternetExplorerOptions();
                     break;
                 case FirefoxOptions firefoxOptions:
-                    firefoxOptions.AddAdditionalCapability(CapabilityType.BrowserName, "firefox");
-                    firefoxOptions.AddAdditionalCapability(CapabilityType.Platform, new Platform(PlatformType.Windows));
-                    firefoxOptions.BrowserExecutableLocation = @"C:\Program Files (x86)\Mozilla Firefox\firefox.exe";
+                    firefoxOptions.AddAdditionalCapability(CapabilityType.EnableProfiling, true, true);
                     break;
                 case ChromeOptions chromeOptions:
                     chromeOptions.AddAdditionalCapability(CapabilityType.EnableProfiling, true, true);
